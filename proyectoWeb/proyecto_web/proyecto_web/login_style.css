@@ -18,6 +18,10 @@ header {
     text-shadow: rgba(0,0,0,0.2) 0 5px;
 }
 
+#logo {
+    width: 20vh;
+}
+
 .container_principal {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100vw;
+    height: 150px;
+    background-color: #414141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #f2f2f2;
+    font-size: 10px;
+    text-shadow: rgba(0,0,0,0.2) 0 5px;
+}
+
+#logo {
+    width: 150px;
+}

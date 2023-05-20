@@ -19,18 +19,15 @@ function login() {
 
             if (usuario.user === "profesor") {
 
-                alert("profesor");
                 window.location = "profesor.html";
 
             } else if (usuario.user === "alumno") {
 
                 window.location = "alumno.html";
-                alert("alumno");
 
             } else if (usuario.user === "admin") {
 
                 window.location = "admin.html";
-                alert("admin");
                 
             }
         }
