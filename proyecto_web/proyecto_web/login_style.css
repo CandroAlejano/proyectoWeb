@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100vw;
+    height: 20vh;
+    background-color: #414141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #f2f2f2;
+    font-size: 10px;
+    text-shadow: rgba(0,0,0,0.2) 0 5px;
+}
+
+.container_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #414141;
+}
+
+input {
+    outline: 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus {
+    background-color: #b2cef8;
+    transition: all 0.3s;
+}
+
+.boton {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: crimson;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    
+}
+
+.boton:hover {
+    background-color: rgb(147, 14, 41);
+    transition: all 0.3s ease;
+}
+
+.boton:focus {
+    background-color: #f2f2f2;
+    color: black;
+    transition: all 0.3s;
+}
+
+#boton_registro {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: crimson;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#boton_registro:hover {
+    background-color: rgb(147, 14, 41);
+    transition: all 0.3s ease;
+}
+
+#boton_registro:focus {
+    background-color: #f2f2f2;
+    color: black;
+    transition: all 0.3s;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 10px 10px 0 rgba(0,0,0,0.2);
+}
+
+.olas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.olas svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 251px;
+}
+
+.olas .shape-fill {
+    fill: crimson;
+}
+
+
