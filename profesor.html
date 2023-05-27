@@ -92,20 +92,35 @@
         background-color: #f2f2f2;
         margin: 10px;
         transition: transform 0.3s ease;
-        text-align: center;
-        font-size: 40px;
+        
+
     }
 
     .box:hover {
         transform: scale(1.2);
-      text-decoration: underline;
+        text-decoration: underline;
+        border: 1px solid black;
     }
 
     @media only screen and (max-width: 500px) {
         .container {
             flex-direction: column;
-            
+
         }
+    }
+
+    label {
+        font-size: 20px;
+
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    h1:hover {
+     
     }
 </style>
 
@@ -126,13 +141,57 @@
     <main class="container">
 
 
-        <div class="box">Mi Tablet</div>
+        <div class="box">
+            <h1>Mi Tablet</h1>
+        </div>
 
 
-        <div class="box">Tablets Alumnos</div>
+        <div class="box">
+            <h1>Tablets Alumnos</h1>
+            <br>
+            <br>
+            <label for="nombre">Grupo: </label>
+            <input type="text" id="Grupo" />
+            <br>
+            <br>
+            <br>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="Nombre" />
+
+        </div>
 
 
-        <div class="box">Crear Incidencia</div>
+        <div class="box">
+            <h1>Crear Incidencia</h1>
+
+            <label for="nombre">Estado: </label>
+            <input type="text" id="Estado" />
+            <br><br>
+
+            <label for="nombre">ID: </label>
+            <input type="text" id="ID" />
+            <br>
+            <br>
+
+            <label for="nombre">Modelo: </label>
+            <input type="text" id="Estado" />
+            <br>
+            <br>
+
+            <label for="nombre">Especificaciones: </label>
+            <input type="text" id="Especificaciones" />
+            <br>
+            <br>
+
+            <label for="nombre">Zona afectada: </label>
+            <input type="text" id="Zona afectada" />
+            <br>
+            <br>
+
+            <label for="nombre">Numero de reparaciones: </label>
+            <input type="text" id="Numero de reparaciones" />
+
+        </div>
     </main>
 
     <footer>
