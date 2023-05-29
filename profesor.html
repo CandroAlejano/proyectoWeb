@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profesor</title>
+    <script defer src="https://app.embed.im/snow.js"></script>
 </head>
 <style>
     * {
@@ -17,6 +18,7 @@
     body {
         display: flex;
         flex-direction: column;
+        background-color: rgba(54, 3, 30, 0);
     }
 
     header {
@@ -31,6 +33,8 @@
         font-size: 10px;
         text-shadow: rgba(0, 0, 0, 0.2) 0 5px;
         order: 1;
+        display: flex;
+
     }
 
 
@@ -43,6 +47,8 @@
         background-color: gold;
         width: 100vw;
         height: 150px;
+        display: flex;
+
     }
 
 
@@ -92,8 +98,8 @@
         background-color: #f2f2f2;
         margin: 10px;
         transition: transform 0.3s ease;
-        
-
+        text-align: center;
+        border-radius: 10%;
     }
 
     .box:hover {
@@ -111,7 +117,7 @@
 
     label {
         font-size: 20px;
-
+        vertical-align: middle;
     }
 
     h1 {
@@ -119,13 +125,104 @@
         font-size: 40px;
     }
 
-    h1:hover {
-     
+    .mi {
+        font-size: 20px;
+    }
+
+    footer {
+
+        height: fit-content;
+        background-color: #333;
+        width: auto;
+        order: 3;
+    }
+
+    .footer_container {
+        width: auto;
+        display: flex;
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_container .logo {
+        width: 100px;
+    }
+
+    .link_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: -80px;
+    }
+
+    .link {
+        margin: 5px;
+        text-decoration: none;
+        color: #d3d3d3;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    .redes_sociales img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .redes_sociales img:hover {
+        animation: float;
+        animation: float 1.5s ease-in-out infinite;
+    }
+
+    @media all and (max-width: 650px) {
+        .redes_sociales img {
+            width: 20px;
+        }
+
+        .redes_sociales {
+            margin: 10px;
+        }
+
+        .link_container {
+            margin: 0;
+        }
+    }
+
+    .contenedor {
+        animation-name: imgw;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes imgw {
+        0% {
+            transform: rotate(0deg);
+        }
+
+
+
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .f {
+        color: white;
     }
 </style>
 
 <body>
     <header>
+        <div class="contenedor">
+            <img width="200px" height="200px" src="logo_profesor.png">
+        </div>
         <div class="animated_word">
             <div class="pro">P</div>
             <div class="pro">r</div>
@@ -143,6 +240,39 @@
 
         <div class="box">
             <h1>Mi Tablet</h1>
+            <br>
+            <br>
+            <p class="mi">Grupo :
+                1ª DAM
+            </p>
+            <br>
+            <br>
+            <p class="mi">Nombre :
+                Andrés
+            </p>
+            <br>
+            <br>
+            <p class="mi">Apellido :
+                Lopez
+            </p>
+            <br>
+            <br>
+            <p class="mi">Estado :
+                Buen estado
+            </p>
+            <br>
+            <br>
+            <p class="mi">Id :
+                8368
+            </p>
+            <br>
+            <br>
+            <p class="mi">Modelo :
+                Redmi Pad 4GB + 128GB Mint Green
+
+            </p>
+
+
         </div>
 
 
@@ -150,53 +280,80 @@
             <h1>Tablets Alumnos</h1>
             <br>
             <br>
-            <label for="nombre">Grupo: </label>
-            <input type="text" id="Grupo" />
+            <label for="nombre">Grupo: </label><br>
+            <input type="text" id="Grupo" placeholder="grupo" />
             <br>
             <br>
             <br>
-            <label for="nombre">Nombre: </label>
-            <input type="text" id="Nombre" />
+            <label for="nombre">Nombre: </label><br>
+            <input type="text" id="Nombre" placeholder="nombre" />
+            <br>
+            <br>
+            <br>
+            <label for="nombre">Apellidos: </label><br>
+            <input type="text" id="Apellido" placeholder="apellidos" />
 
         </div>
 
 
         <div class="box">
             <h1>Crear Incidencia</h1>
+            <br>
+            <br>
 
-            <label for="nombre">Estado: </label>
-            <input type="text" id="Estado" />
+            <label for="nombre">Estado: </label><br>
+            <input type="text" id="Estado" placeholder="estado" />
             <br><br>
 
-            <label for="nombre">ID: </label>
-            <input type="text" id="ID" />
+            <label for="nombre">ID: </label><br>
+            <input type="text" id="ID" placeholder="id" />
             <br>
             <br>
 
-            <label for="nombre">Modelo: </label>
-            <input type="text" id="Estado" />
+            <label for="nombre">Modelo: </label><br>
+            <input type="text" id="Estado" placeholder="modelo" />
             <br>
             <br>
 
-            <label for="nombre">Especificaciones: </label>
-            <input type="text" id="Especificaciones" />
+            <label for="nombre">Especificaciones: </label><br>
+            <input type="text" id="Especificaciones" placeholder="Especificaciones" />
             <br>
             <br>
 
-            <label for="nombre">Zona afectada: </label>
-            <input type="text" id="Zona afectada" />
+            <label for="nombre">Zona afectada: </label><br>
+            <input type="text" id="Zona afectada" placeholder="zona afectada" />
             <br>
             <br>
 
-            <label for="nombre">Numero de reparaciones: </label>
-            <input type="text" id="Numero de reparaciones" />
+            <label for="nombre">Numero de reparaciones: </label><br>
+            <input type="text" id="Numero de reparaciones" placeholder="nuemro de reparaciones" />
 
         </div>
     </main>
 
     <footer>
+        <div class="footer_container">
+            <img class="logo" src="imagenes/logo.png" alt="">
 
+
+            <div class="link_container">
+                <p class="f">© 2023 Generalitat</p>
+                <br>
+                <p class="f">CP: 03330</p> <br>
+                <p class="f">Crevillent</p> <br>
+                <p class="f">Teléfono: 966912225</p> <br>
+                <a class="link" href="">Politica de Privacidad</a>
+                <a class="link" href="">Politica de Cookies</a>
+            </div>
+
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com"><img src="insta.png" alt="">
+                    <a href="https://es-es.facebook.com"><img src="facebook.png" alt=""></a>
+                    <a href="https://twitter.com/home"></a><img src="twitter.png" alt="">
+                    <a href="imagenes/meme-wojack.jpeg"><img src="dah.png" alt=""></a>
+            </div>
     </footer>
+
 </body>
 
 </html>
