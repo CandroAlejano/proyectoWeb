@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profesor</title>
-    <script defer src="https://app.embed.im/snow.js"></script>
+
 </head>
 <style>
     * {
@@ -18,7 +18,6 @@
     body {
         display: flex;
         flex-direction: column;
-        background-color: rgba(54, 3, 30, 0);
     }
 
     header {
@@ -72,6 +71,24 @@
         cursor: grab;
         color: #ffff;
         font-size: 80px;
+        animation-name: col;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes col {
+        0% {
+            color: #333;
+        }
+
+        50% {
+            color: yellow;
+        }
+
+        100% {
+            color: red;
+        }
     }
 
     .animated_word {
@@ -90,6 +107,7 @@
     .container {
         display: flex;
         justify-content: space-evenly;
+        border-radius: 10%;
     }
 
     .box {
@@ -99,7 +117,6 @@
         margin: 10px;
         transition: transform 0.3s ease;
         text-align: center;
-        border-radius: 10%;
     }
 
     .box:hover {
@@ -202,24 +219,81 @@
 
     @keyframes imgw {
         0% {
-            transform: rotate(0deg);
+            opacity: 0;
         }
 
-
-
+        50% {
+            opacity: 1;
+        }
 
         100% {
-            transform: rotate(360deg);
+            opacity: 0;
         }
     }
 
     .f {
         color: white;
     }
+
+    a {
+        font-size: 20px;
+        color: white;
+
+    }
+
+    .alumno {
+        color: green;
+        border: 1px solid black;
+        width: 150px;
+        margin-left: 50px;
+        border-radius: 10%;
+
+    }
+
+    .rota {
+        color: red;
+    }
+
+    .defectuosa {
+        color: orange;
+    }
+
+    .colores {
+        margin-top: 20px;
+    }
+
+    .verde {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: green;
+        margin-left: 50%;
+
+    }
+
+    .amarillo {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: orange;
+        margin-left: 50%;
+    }
+
+    .rojo {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        margin-left: 50%;
+    }
+   
 </style>
 
 <body>
     <header>
+        <div class="float">
+            <p><a href="">Volver</a></p>
+        </div>
         <div class="contenedor">
             <img width="200px" height="200px" src="logo_profesor.png">
         </div>
@@ -255,22 +329,7 @@
             <p class="mi">Apellido :
                 Lopez
             </p>
-            <br>
-            <br>
-            <p class="mi">Estado :
-                Buen estado
-            </p>
-            <br>
-            <br>
-            <p class="mi">Id :
-                8368
-            </p>
-            <br>
-            <br>
-            <p class="mi">Modelo :
-                Redmi Pad 4GB + 128GB Mint Green
 
-            </p>
 
 
         </div>
@@ -280,21 +339,60 @@
             <h1>Tablets Alumnos</h1>
             <br>
             <br>
-            <label for="nombre">Grupo: </label><br>
-            <input type="text" id="Grupo" placeholder="grupo" />
-            <br>
-            <br>
-            <br>
-            <label for="nombre">Nombre: </label><br>
-            <input type="text" id="Nombre" placeholder="nombre" />
-            <br>
-            <br>
-            <br>
-            <label for="nombre">Apellidos: </label><br>
-            <input type="text" id="Apellido" placeholder="apellidos" />
 
+
+            <label for="Clases">Selecciona una clase</label>
+            <select id="Clases" onchange="mostrarCuadroSeleccionado()">
+                <option value="">Seleccione una clase</option>
+                <option value="1">1ª Eso</option>
+                <option value="2">2ª Eso</option>
+                <option value="3">3ª Eso</option>
+                <option value="4">4ª Eso</option>
+            </select>
+            <br>
+            <br>
+            <div id="cuadroSeleccionado"></div>
+
+            <script src="script.js"></script>
+
+            <div class="colores">
+                <p>Todo correcto
+                <div class=" verde"></div>
+                </p>
+                <p>Falta algo
+                <div class=" amarillo"></div>
+                </p>
+                <p>En reparación
+                <div class=" rojo"></div>
+                </p>
+            </div>
         </div>
+        <script>function mostrarCuadroSeleccionado() {
+                var select = document.getElementById("Clases");
+                var cuadroSeleccionado = document.getElementById("cuadroSeleccionado");
 
+                if (select.value !== "") {
+                    cuadroSeleccionado.style.display = "block";
+                    cuadroSeleccionado.textContent = "Seleccionaste: " + select.value;
+                    if (select.value == 1) {
+                        cuadroSeleccionado.innerHTML = "<div class ='alumno'> Juan Pérez <br> <div class='rota'>María González <br> Carlos Ramírez</div> Ana López <br> Luis Martínez <br> Laura García <br><div class='defectuosa'> Alejandro Rodríguez</div>Patricia Sánchez <br> Andrés Torres <br> Gabriela Fernández </div>"
+                    }
+                    else if (select.value == 2) {
+                        cuadroSeleccionado.innerHTML = "<div class ='alumno'> Roberto Gómezm<br><div class='rota'>Adriana Morales<br>Diego Herrera<br>Valentina Ríos</div>Javier Castro<br>Daniela Torres<br>Martín Silva<br>Natalia Vargas<br>Sebastián Ortega<br><div class='defectuosa'> Camila Mendoza</div></div>"
+                    }
+                    else if (select.value == 3) {
+                        cuadroSeleccionado.innerHTML = "<div class ='alumno'><div class='defectuosa'> Sofía Torres<br>Mateo García<br>Valentina López<br>Sebastián Martínez</div>Isabella Rodríguez<br>Santiago Ramírez<br>Camila Sánchez<br><div class='rota'>Daniel González<br>Emma Hernández<br>Nicolás Castro</div></div>"
+                    }
+                    else if (select.value == 4) {
+                        cuadroSeleccionado.innerHTML = "<div class ='alumno'> Sofia Cruz<br><div class='defectuosa'>Lucas Torres<br>Valentina Ramirez</div>Mateo Hernandez<br>Isabella Gonzalez<br>Santiago Lopez<br>Camila Martinez<br>Nicolas Rodriguez<br><div class='rota'>Mia Perez<br>Sebastian Sanchez</div></div>"
+                    }
+
+
+                } else {
+                    cuadroSeleccionado.style.display = "none";
+                }
+            }
+        </script>
 
         <div class="box">
             <h1>Crear Incidencia</h1>
