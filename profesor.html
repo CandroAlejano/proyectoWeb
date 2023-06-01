@@ -58,10 +58,10 @@
 
     .main_container {
         display: flex;
-        width: auto;
-        height: 70vh;
         align-items: center;
         justify-content: space-evenly;
+        width: auto;
+        height: 70vh;
     }
 
 
@@ -117,11 +117,11 @@
         margin: 10px;
         transition: transform 0.3s ease;
         text-align: center;
+        border-radius: 10%;
     }
 
     .box:hover {
         transform: scale(1.2);
-        text-decoration: underline;
         border: 1px solid black;
     }
 
@@ -248,6 +248,7 @@
         margin-left: 50px;
         border-radius: 10%;
 
+
     }
 
     .rota {
@@ -286,7 +287,6 @@
         background-color: red;
         margin-left: 50%;
     }
-   
 </style>
 
 <body>
@@ -313,7 +313,7 @@
 
 
         <div class="box">
-            <h1>Mi Tablet</h1>
+            <h1>Datos Profesor</h1>
             <br>
             <br>
             <p class="mi">Grupo :
@@ -329,7 +329,11 @@
             <p class="mi">Apellido :
                 Lopez
             </p>
-
+            <br>
+            <br>
+            <p class="mi">ID :
+                9283
+            </p>
 
 
         </div>
@@ -385,6 +389,7 @@
                     }
                     else if (select.value == 4) {
                         cuadroSeleccionado.innerHTML = "<div class ='alumno'> Sofia Cruz<br><div class='defectuosa'>Lucas Torres<br>Valentina Ramirez</div>Mateo Hernandez<br>Isabella Gonzalez<br>Santiago Lopez<br>Camila Martinez<br>Nicolas Rodriguez<br><div class='rota'>Mia Perez<br>Sebastian Sanchez</div></div>"
+
                     }
 
 
@@ -398,33 +403,32 @@
             <h1>Crear Incidencia</h1>
             <br>
             <br>
+            <form action="mostrar.php " method="">
+                <label for="nombre">Nombre del alumno: </label><br>
+                <input type value="text" id="Estado" placeholder="Nombre del alumno:" />
+                <br><br>
 
-            <label for="nombre">Estado: </label><br>
-            <input type="text" id="Estado" placeholder="estado" />
-            <br><br>
+                <label for="">Componente afectado : </label><br>
+                <select name="Clases" id="">
+                    <option value="Tablet">Tablet</option>
+                    <option value="Teclado">Teclado</option>
+                    <option value="Cargador">Cargador</option>
+                    <option value="Pantalla">Pantalla</option>
+                    <option value="Batería">Batería</option>
+                    <option value="Rendimiento">Rendimiento</option>
+                    <option value="Conexión">Conexión</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <label for="description">Describa el problema</label>
+                <textarea name="description" rows="10" cols="10"></textarea>
+                <br>
 
-            <label for="nombre">ID: </label><br>
-            <input type="text" id="ID" placeholder="id" />
-            <br>
-            <br>
+                <br>
+                <button type="submit">Envia</button>
+            </form>
 
-            <label for="nombre">Modelo: </label><br>
-            <input type="text" id="Estado" placeholder="modelo" />
-            <br>
-            <br>
-
-            <label for="nombre">Especificaciones: </label><br>
-            <input type="text" id="Especificaciones" placeholder="Especificaciones" />
-            <br>
-            <br>
-
-            <label for="nombre">Zona afectada: </label><br>
-            <input type="text" id="Zona afectada" placeholder="zona afectada" />
-            <br>
-            <br>
-
-            <label for="nombre">Numero de reparaciones: </label><br>
-            <input type="text" id="Numero de reparaciones" placeholder="nuemro de reparaciones" />
 
         </div>
     </main>
@@ -435,11 +439,11 @@
 
 
             <div class="link_container">
-                <p class="f">© 2023 Generalitat</p>
+                <!-- <p class="f">© 2023 Generalitat</p>
                 <br>
                 <p class="f">CP: 03330</p> <br>
                 <p class="f">Crevillent</p> <br>
-                <p class="f">Teléfono: 966912225</p> <br>
+                <p class="f">Teléfono: 966912225</p> <br>-->
                 <a class="link" href="">Politica de Privacidad</a>
                 <a class="link" href="">Politica de Cookies</a>
             </div>
@@ -447,7 +451,7 @@
             <div class="redes_sociales">
                 <a href="https://www.instagram.com"><img src="insta.png" alt="">
                     <a href="https://es-es.facebook.com"><img src="facebook.png" alt=""></a>
-                    <a href="https://twitter.com/home"></a><img src="twitter.png" alt="">
+                    <a href="https://twitter.com/"></a><img src="twitter.png" alt="">
                     <a href="imagenes/meme-wojack.jpeg"><img src="dah.png" alt=""></a>
             </div>
     </footer>
