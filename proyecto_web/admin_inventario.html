@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_inventario_style.css">
+    <script src="admin_inventario.js" defer></script>
+    <title>Admin_Inventario</title>
+</head>
+
+<body>
+    <header>
+
+        <img class="logo" id="logo" src="imagenes/logo_admin.png" alt="">
+
+        <div class="animated_word">
+            <div class="pro">A</div>
+            <div class="pro">d</div>
+            <div class="pro">m</div>
+            <div class="pro">i</div>
+            <div class="pro">n</div>
+        </div>
+    </header>
+
+    <main class="main_container">
+        <div class="titulo">
+            <h1>INVENTARIO</h1>
+        </div>
+
+        <div class="table_container">
+            <div class="tabla">
+                <div class="buscador_container">
+                    <input type="text" name="buscador" class="buscador" placeholder="Buscar...">
+                </div>
+
+                <table>
+                    <tr>
+                        <th class="texto_centro" colspan="5">INVENTARIO TABLETS</th>
+                    </tr>
+                    <tr class="columnas">
+                        <th>Modelo</th>
+                        <th>Referencia</th>
+                        <th>En uso</th>
+                        <th>Disponibles</th>
+                        <th>Total</th>
+
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="modelo">Samsung</td>
+                        <td>15435I</td>
+                        <td>380</td>
+                        <td>70</td>
+                        <td>450</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="modelo">Xiaomi</td>
+                        <td>12356A</td>
+                        <td>350</td>
+                        <td>50</td>
+                        <td>400</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="modelo">Motorola</td>
+                        <td>45978Y</td>
+                        <td>350</td>
+                        <td>50</td>
+                        <td>400</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="modelo">Apple</td>
+                        <td>45978Y</td>
+                        <td>350</td>
+                        <td>50</td>
+                        <td>400</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="modelo">Nokia</td>
+                        <td>45978Y</td>
+                        <td>350</td>
+                        <td>50</td>
+                        <td>400</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <form class="form_solicitudes">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="nombre" required>
+
+                <label for="text">Curso:</label>
+                <input type="text" id="Curso" name="Curso" required>
+
+                <label for="text">Id tablet:</label>
+                <input type="text" id="ID" name="ID" required>
+
+                <label for="mensaje">Descripcion:</label>
+                <textarea id="Problema" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <img class="logo" src="imagenes/logo.png" alt="">
+
+
+            <div class="link_container">
+                <a class="link" href="">Politica de Privacidad</a>
+                <a class="link" href="">Politica de Cookies</a>
+            </div>
+
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com"><img src="imagenes/insta.png" alt="">
+                    <a href="https://es-es.facebook.com"><img src="imagenes/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/home"></a><img src="imagenes/twitter.png" alt="">
+                    <a href="imagenes/meme-wojack.jpeg"><img src="imagenes/dah.png" alt=""></a>
+            </div>
+    </footer>
+    </div>
+</body>
+
+</html>

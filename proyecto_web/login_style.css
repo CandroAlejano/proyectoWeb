@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
 
 header {
     width: 100vw;
@@ -16,6 +20,11 @@ header {
     color: #f2f2f2;
     font-size: 10px;
     text-shadow: rgba(0,0,0,0.2) 0 5px;
+}
+
+
+header img {
+    width: 200px;
 }
 
 .container_principal {
@@ -135,4 +144,9 @@ input:focus {
     fill: crimson;
 }
 
-
+@media all and (max-height: 500px) {
+    header .logo {
+        width: 100px;
+        transition: all 0.2s;
+    }
+}

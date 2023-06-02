@@ -1,0 +1,321 @@
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  height: 15vh;
+  width: auto;
+  background-color: #333;
+  height: fit-content;
+  z-index: 1;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+.pro {
+  transition: 0.4s;
+  transform: translateX(0);
+  cursor: grab;
+  color: #ffff;
+  font-size: 80px;
+}
+
+.animated_word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(50vw - 280px);
+}
+
+.pro:hover {
+  transform: translateY(-1rem);
+  background: -webkit-linear-gradient(
+    120deg,
+    hsl(41, 100%, 68%),
+    hsl(45, 83%, 57%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main {
+  order: 2;
+}
+
+.main_container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 2;
+  background-color: #f3f3f3;
+}
+
+.titulo {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+.table_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: row;
+  height: fit-content;
+  width: fit-content;
+  background-color: #d3d3d3;
+  padding: 30px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 10px solid hsl(45, 83%, 57%);
+}
+
+.buscador_container {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.buscador {
+  background-color: #f2f2f2;
+  width: 300px;
+  height: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 3px solid #333;
+}
+
+.buscador:focus {
+  background-color: #fdf1e2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 800px;
+  background-color: white;
+}
+
+.texto_centro {
+  border: 2px solid black;
+  padding: 15px;
+  background-color: rgb(248, 211, 47);
+}
+
+.columnas th {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.contenido_tabla td {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.form_solicitudes {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin: 30px;
+  margin-top: 100px;
+}
+
+.form_solicitudes input {
+  height: 25px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #333;
+  margin: 5px;
+}
+
+.form_solicitudes textarea {
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #333;
+  margin: 5px;
+  padding: 10px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  align-self: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(55, 158, 55);
+  color: white;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(33, 187, 33);
+}
+
+button:focus {
+  background-color: #f2f2f2;
+  color: black;
+  transition: all 0.1s;
+}
+
+footer {
+  height: fit-content;
+  background-color: #333;
+  width: auto;
+  order: 3;
+  z-index: 1;
+}
+
+.footer_container {
+  width: auto;
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_container .logo {
+  width: 100px;
+}
+
+.link_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: -80px;
+}
+
+.link {
+  margin: 5px;
+  text-decoration: none;
+  color: #d3d3d3;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.redes_sociales img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.redes_sociales img:hover {
+  animation: float;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+@media all and (max-width: 1000px) {
+  table {
+    width: 10vw;
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  .logo {
+    width: 100px;
+    transition: all 0.3s;
+  }
+
+  .pro {
+    font-size: 50px;
+    transition: all 0.3s;
+  }
+
+  .animated_word {
+    margin: 0;
+    transition: all 0.3s;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .redes_sociales img {
+    width: 20px;
+  }
+
+  .redes_sociales {
+    margin: 10px;
+  }
+
+  .link_container {
+    margin: 0;
+  }
+
+  .main_container {
+    height: fit-content;
+  }
+
+  .table_container {
+    flex-direction: column;
+    width: fit-content;
+    padding: 5px;
+  }
+
+  .form_solicitudes {
+    width: 70vw;
+    height: 30vh;
+  }
+
+  table {
+    width: 5vw;
+    font-size: 12px;
+  }
+
+  .form_solicitudes input {
+    height: 60px;
+
+  }
+
+  .form_solicitudes textarea {
+    height: 100px;
+  }
+
+  button {
+    height: 100px;
+    width: 200px;
+  }
+}
