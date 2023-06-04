@@ -67,7 +67,8 @@ main {
 }
 
 .main_container {
-  height: 80vh;
+  min-height: 85vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +82,7 @@ main {
   align-items: center;
 }
 
-.table_container {
+.solicitudes_container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -117,7 +118,7 @@ main {
   background-color: #fdf1e2;
 }
 
-table {
+.tabla {
   border-collapse: collapse;
   width: 800px;
   background-color: white;
@@ -129,17 +130,19 @@ table {
   background-color: rgb(248, 211, 47);
 }
 
-.columnas th {
+th {
   border: 2px solid black;
   padding: 10px;
   background-color: #333;
   color: white;
 }
 
-.contenido_tabla td {
+td {
   border: 2px solid black;
   padding: 10px;
 }
+
+
 
 .form_solicitudes {
   display: flex;
@@ -159,6 +162,16 @@ table {
   border: 2px solid #333;
   margin: 5px;
   padding: 10px;
+}
+
+.form_solicitudes textarea {
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #333;
+  margin: 5px;
+  padding: 10px;
+  resize: none;
 }
 
 button {
@@ -281,7 +294,7 @@ footer {
     height: fit-content;
   }
 
-  .table_container {
+  .solicitudes_container {
     flex-direction: column;
     width: fit-content;
     padding: 5px;
@@ -292,19 +305,22 @@ footer {
     height: fit-content;
   }
 
-  table {
+  .tabla {
     width: 5vw;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .form_solicitudes input {
     height: 40px;
-
   }
 
-
   button {
-    height: 50px;
-    width: 200px;
+    height: 30px;
+    width: 100px;
+  }
+
+  .acciones {
+    display: flex;
+    flex-direction: column;
   }
 }

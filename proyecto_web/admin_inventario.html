@@ -49,35 +49,35 @@
                     </tr>
                     <tr class="contenido_tabla">
                         <td class="modelo">Samsung</td>
-                        <td>15435I</td>
+                        <td class="id">15435I</td>
                         <td>380</td>
                         <td>70</td>
                         <td>450</td>
                     </tr>
                     <tr class="contenido_tabla">
                         <td class="modelo">Xiaomi</td>
-                        <td>12356A</td>
+                        <td class="id">12356A</td>
                         <td>350</td>
                         <td>50</td>
                         <td>400</td>
                     </tr>
                     <tr class="contenido_tabla">
                         <td class="modelo">Motorola</td>
-                        <td>45978Y</td>
+                        <td class="id">45978Y</td>
                         <td>350</td>
                         <td>50</td>
                         <td>400</td>
                     </tr>
                     <tr class="contenido_tabla">
                         <td class="modelo">Apple</td>
-                        <td>45978Y</td>
+                        <td class="id">45978Y</td>
                         <td>350</td>
                         <td>50</td>
                         <td>400</td>
                     </tr>
                     <tr class="contenido_tabla">
                         <td class="modelo">Nokia</td>
-                        <td>45978Y</td>
+                        <td class="id">45978Y</td>
                         <td>350</td>
                         <td>50</td>
                         <td>400</td>
@@ -87,17 +87,20 @@
 
 
             <form class="form_solicitudes">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="Nombre" name="nombre" required>
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
 
-                <label for="text">Curso:</label>
-                <input type="text" id="Curso" name="Curso" required>
+                <label for="referencia">Referencia:</label>
+                <input type="text" id="referencia" name="referencia" required>
 
-                <label for="text">Id tablet:</label>
-                <input type="text" id="ID" name="ID" required>
+                <label for="text">En uso:</label>
+                <input type="text" id="enUso" name="enUso" required>
 
-                <label for="mensaje">Descripcion:</label>
-                <textarea id="Problema" name="mensaje" required></textarea>
+                <label for="text">Disponibles:</label>
+                <input type="text" id="disponibles" name="disponibles" required>
+
+                <label for="text">Total:</label>
+                <input id="total" name="total" required></input>
 
                 <button type="submit">Enviar</button>
             </form>

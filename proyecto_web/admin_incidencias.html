@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_incidencias_style.css">
+    <script src="admin_incidencias.js" defer></script>
+    <title>Admin_incidencias</title>
+</head>
+
+<body>
+    <header>
+
+        <img class="logo" id="logo" src="imagenes/logo_admin.png" alt="">
+
+        <div class="animated_word">
+            <div class="pro">A</div>
+            <div class="pro">d</div>
+            <div class="pro">m</div>
+            <div class="pro">i</div>
+            <div class="pro">n</div>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+        <div class="titulo">
+            <h1>INCIDENCIAS</h1>
+        </div>
+
+        <div class="solicitudes_container">
+            <div class="table_container">
+
+                <div class="buscador_container">
+                    <input type="text" name="buscador" class="buscador" placeholder="Buscar...">
+                </div>
+
+                <table class="tabla" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Curso</th>
+                            <th>ID</th>
+                            <th>Problema</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="nombre">Daniel Abuelo</td>
+                            <td class="curso">2 DAM</td>
+                            <td>30D</td>
+                            <td> fallo en la pantalla</td>
+                            <td class="acciones">
+                                <button class="btn-aceptar">Aceptar</button>
+                                <button class="btn-rechazar">Rechazar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Ramón Ramirez</td>
+                            <td class="curso">1 ESO</td>
+                            <td class="id">30D</td>
+                            <td> fallo en la pantalla</td>
+                            <td class="acciones">
+                                <button class="btn-aceptar">Aceptar</button>
+                                <button class="btn-rechazar">Rechazar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Marta Moreno</td>
+                            <td class="curso">2 Bach</td>
+                            <td class="id">542D</td>
+                            <td> fallo en la pantalla</td>
+                            <td class="acciones">
+                                <button class="btn-aceptar">Aceptar</button>
+                                <button class="btn-rechazar">Rechazar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Joselu Johnson</td>
+                            <td class="curso">2 DAW</td>
+                            <td class="id">431D</td>
+                            <td> fallo en la pantalla</td>
+                            <td class="acciones">
+                                <button class="btn-aceptar">Aceptar</button>
+                                <button class="btn-rechazar">Rechazar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Pepe Villuela</td>
+                            <td class="curso">1 DAM</td>
+                            <td class="id">453D</td>
+                            <td> fallo en el cargador</td>
+                            <td class="acciones">
+                                <button class="btn-aceptar">Aceptar</button>
+                                <button class="btn-rechazar">Rechazar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form class="form_solicitudes" id="form_solicitudes">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="nombre" required>
+
+                <label for="text">Curso:</label>
+                <input type="text" id="Curso" name="Curso" required>
+
+                <label for="text">Id tablet:</label>
+                <input type="text" id="ID" name="ID" required>
+
+                <label for="mensaje">Problema:</label>
+                <textarea type="text" id="Problema" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <img class="logo" src="imagenes/logo.png" alt="">
+
+
+            <div class="link_container">
+                <a class="link" href="">Politica de Privacidad</a>
+                <a class="link" href="">Politica de Cookies</a>
+            </div>
+
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com"><img src="imagenes/insta.png" alt="">
+                    <a href="https://es-es.facebook.com"><img src="imagenes/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/home"></a><img src="imagenes/twitter.png" alt="">
+                    <a href="imagenes/meme-wojack.jpeg"><img src="imagenes/dah.png" alt=""></a>
+            </div>
+    </footer>
+    </div>
+</body>
+
+</html>

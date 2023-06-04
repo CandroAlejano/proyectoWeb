@@ -67,25 +67,25 @@ main {
 }
 
 .main_container {
-  height: 80vh;
+  min-height: 85vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   order: 2;
-  background-color: #f3f3f3;
+  background-color: white;
 }
 
 .titulo {
-  height: 15vh;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
 
-.table_container {
+.solicitudes_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  flex-direction: row;
   height: fit-content;
   width: fit-content;
   background-color: #d3d3d3;
@@ -94,6 +94,8 @@ main {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom: 10px solid hsl(45, 83%, 57%);
+  order: 2;
+  margin: 30px;
 }
 
 .buscador_container {
@@ -117,10 +119,18 @@ main {
   background-color: #fdf1e2;
 }
 
-table {
+.table_form_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tabla {
   border-collapse: collapse;
   width: 800px;
   background-color: white;
+  margin: 20px;
+  margin-top: 0;
 }
 
 .texto_centro {
@@ -129,36 +139,57 @@ table {
   background-color: rgb(248, 211, 47);
 }
 
-.columnas th {
+#tabla_container {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+th {
   border: 2px solid black;
   padding: 10px;
   background-color: #333;
   color: white;
 }
 
-.contenido_tabla td {
+td {
   border: 2px solid black;
   padding: 10px;
 }
 
-.form_solicitudes {
+.formulario {
   display: flex;
   flex-direction: column;
   width: 200px;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: #f3f3f3;
   border-radius: 10px;
   margin: 30px;
-  margin-top: 100px;
 }
 
-.form_solicitudes input {
+.formulario h2 {
+  margin: 5px;
+  align-self: center;
+}
+
+.formulario input {
   height: 25px;
   border-radius: 10px;
   outline: none;
   border: 2px solid #333;
   margin: 5px;
   padding: 10px;
+  display: none;
+}
+
+.formulario label {
+  display: none;
+}
+
+.formulario:focus-within input,
+.formulario:focus-within label,
+.formulario:focus-within button {
+  display: block;
 }
 
 button {
@@ -176,12 +207,6 @@ button {
 
 button:hover {
   background-color: rgb(33, 187, 33);
-}
-
-button:focus {
-  background-color: #f2f2f2;
-  color: black;
-  transition: all 0.1s;
 }
 
 footer {
@@ -233,11 +258,26 @@ footer {
   animation: float 1.5s ease-in-out infinite;
 }
 
-@media all and (max-width: 1000px) {
-  table {
-    width: 10vw;
-    font-size: 20px;
-  }
+@media all and (max-width: 1300px) {
+    .tabla {
+        width: 5vw;
+    }
+}
+
+@media all and (max-width: 1130px) {
+    .table_form_container {
+        flex-direction: column;
+    }
+
+    #formulario_container {
+        order: 1;
+    }
+
+    #tabla_container {
+        order: 2;
+    }
+    
+    
 }
 
 @media all and (max-width: 500px) {
@@ -281,30 +321,26 @@ footer {
     height: fit-content;
   }
 
-  .table_container {
-    flex-direction: column;
+  .solicitudes_container {
     width: fit-content;
     padding: 5px;
   }
 
-  .form_solicitudes {
-    width: 70vw;
-    height: fit-content;
+  .table_form_container {
+    flex-direction: column;
   }
 
-  table {
+  .tabla {
     width: 5vw;
-    font-size: 12px;
+    font-size: 10px;
   }
 
-  .form_solicitudes input {
-    height: 40px;
-
+  .buscador {
+    margin-top: 20px;
   }
-
-
+  
   button {
-    height: 50px;
-    width: 200px;
+    height: 30px;
+    width: 100px;
   }
 }
