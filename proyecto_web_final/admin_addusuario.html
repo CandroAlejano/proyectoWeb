@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_addusuario_style.css">
+    <script src="admin_addusuario.js" defer></script>
+    <title>Admin_Usuario</title>
+</head>
+
+<body>
+    <header>
+
+        <img class="logo" id="logo" src="imagenes/logo_admin.png" alt="">
+
+        <div class="animated_word">
+            <div class="pro">A</div>
+            <div class="pro">d</div>
+            <div class="pro">m</div>
+            <div class="pro">i</div>
+            <div class="pro">n</div>
+        </div>
+    </header>
+
+    <main class="main_container">
+        <div class="titulo">
+            <h1>AÑADIR USUARIOS</h1>
+        </div>
+
+        <div class="table_form_container">
+            <div class="solicitudes_container" id="formulario_container">
+                <form id="formulario_profesor" class="formulario">
+                    <h2>Profesor</h2>
+                    <label for="nombre_profesor">Nombre:</label>
+                    <input type="text" id="nombre_profesor" required/>
+                    <label for="apellido_profesor">Apellido:</label>
+                    <input type="text" id="apellido_profesor" required/>
+                    <label for="dni_profesor">DNI:</label>
+                    <input type="text" id="dni_profesor" required/>
+                    <label for="correo_profesor">Correo:</label>
+                    <input type="text" id="correo_profesor" required/>
+                    <label for="depa_profesor">Departamento:</label>
+                    <input type="text" id="depa_profesor" required/>
+                    <button type="submit">Añadir</button>
+                </form>
+
+                <form id="formulario_alumno" class="formulario">
+                    <h2>Alumno</h2>
+                    <label for="nombre_alumno">Nombre:</label>
+                    <input type="text" id="nombre_alumno"  required/>
+                    <label for="apellido_alumno">Apellido:</label>
+                    <input type="text" id="apellido_alumno" required/>
+                    <label for="nia_alumno">NIA:</label>
+                    <input type="text" id="nia_alumno" required/>
+                    <label for="correo_alumno">Correo:</label>
+                    <input type="text" id="correo_alumno" required/>
+                    <label for="curso">Curso:</label>
+                    <input type="text" id="curso" required />
+                    <button type="submit">Añadir</button>
+                </form>
+            </div>
+
+            <div class="solicitudes_container" id="tabla_container">
+                
+                <div class="buscador_container">
+                    <input type="text" name="buscador" class="buscador" id="buscador_profesores" placeholder="Buscar...">
+                </div>
+
+                <table class="tabla" id="tabla_profesor">
+                    <tr>
+                        <th class="texto_centro" colspan="5">PROFESORES</th>
+                    </tr>
+                    <tr class="columnas">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Correo</th>
+                        <th>Depa</th>
+
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">German</td>
+                        <td class="apellido">Santacruz</td>
+                        <td class="dni">1012342Z</td>
+                        <td class="correo">gemangg@gmail.com</td>
+                        <td class="departamento">Informatica</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Andres</td>
+                        <td class="apellido">Lopez</td>
+                        <td class="dni">8283123A</td>
+                        <td class="correo">andrew@gmail.com</td>
+                        <td class="departamento">Informatica</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Mario</td>
+                        <td class="apellido">Garcia</td>
+                        <td class="dni">5345325A</td>
+                        <td class="correo">itsame@gmail.com</td>
+                        <td class="departamento">Musica</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Maria</td>
+                        <td class="apellido">Perez</td>
+                        <td class="dni">5747373A</td>
+                        <td class="correo">maria@hotmail.es</td>
+                        <td class="departamento">Lengua</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Dani</td>
+                        <td class="apellido">Sanxez</td>
+                        <td class="dni">12312323A</td>
+                        <td class="correo">danielo@hotmail.es</td>
+                        <td class="departamento">Biologia</td>
+                    </tr>
+                </table>
+
+                <div class="buscador_container">
+                    <input type="text" name="buscador" class="buscador" id="buscador_alumnos" placeholder="Buscar...">
+                </div>
+
+                <table class="tabla" id="tabla_alumno">
+                    <tr>
+                        <th class="texto_centro" colspan="5">ALUMNOS</th>
+                    </tr>
+                    <tr class="columnas">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>NIA</th>
+                        <th>Correo</th>
+                        <th>Curso</th>
+
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Alejandro</td>
+                        <td class="apellido">Cano</td>
+                        <td class="nia">10123421</td>
+                        <td class="correo">acano5111@gmail.com</td>
+                        <td class="curso">1 DAM</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Aaron</td>
+                        <td class="apellido">Cutillas</td>
+                        <td class="nia">30422321</td>
+                        <td class="correo">mamaguevo@gmail.com</td>
+                        <td class="curso">1 DAM</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Pepe</td>
+                        <td class="apellido">Martinez</td>
+                        <td class="nia">12322321</td>
+                        <td class="correo">siiiii@gmail.com</td>
+                        <td class="curso">2 DAM</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Miguel</td>
+                        <td class="apellido">Gil</td>
+                        <td class="nia">95846574</td>
+                        <td class="correo">miguelg@hotmail.es</td>
+                        <td class="curso">2 DAW</td>
+                    </tr>
+                    <tr class="contenido_tabla">
+                        <td class="nombre">Morgan</td>
+                        <td class="apellido">Freeman</td>
+                        <td class="nia">56473853</td>
+                        <td class="correo">morgan@hotmail.es</td>
+                        <td class="curso">1 DAW</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <img class="logo" src="imagenes/logo.png" alt="">
+
+
+            <div class="link_container">
+                <a class="link" href="">Politica de Privacidad</a>
+                <a class="link" href="">Politica de Cookies</a>
+            </div>
+
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com"><img src="imagenes/insta.png" alt="">
+                    <a href="https://es-es.facebook.com"><img src="imagenes/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/home"></a><img src="imagenes/twitter.png" alt="">
+                    <a href="imagenes/meme-wojack.jpeg"><img src="imagenes/dah.png" alt=""></a>
+            </div>
+    </footer>
+    </div>
+</body>
+
+</html>

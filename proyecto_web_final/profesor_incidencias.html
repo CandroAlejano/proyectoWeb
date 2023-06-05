@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profesor_incidencias_style.css">
+    <script src="profesor_incidencias.js" defer></script>
+    <title>Profesor</title>
+</head>
+
+<body>
+    <header>
+
+        <img id="logo" class="logo"  src="imagenes/logo_profesor.png" alt="">
+
+        <div class="titulo_header">
+            <div class="animated_word">
+                <div class="pro">P</div>
+                <div class="pro">r</div>
+                <div class="pro">o</div>
+                <div class="pro">f</div>
+                <div class="pro">e</div>
+                <div class="pro">s</div>
+                <div class="pro">o</div>
+                <div class="pro">r</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+        <div class="titulo">
+            <h1>INCIDENCIAS</h1>
+        </div>
+
+        <div class="solicitudes_container">
+            <div class="table_container">
+
+                <div class="buscador_container">
+                    <input type="text" name="buscador" class="buscador" placeholder="Buscar...">
+                </div>
+
+                <table class="tabla" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>ID</th>
+                            <th>Propietario</th>
+                            <th>Problema</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="nombre">Samsung Galaxy</td>
+                            <td class="curso">123123A</td>
+                            <td>Daniel Abuelo</td>
+                            <td> fallo en la pantalla</td>
+
+                        </tr>
+                        <tr>
+                            <td class="nombre">Sony Erickson</td>
+                            <td class="curso">543123A</td>
+                            <td class="id">Ramón Ramirez</td>
+                            <td> fallo en la pantalla</td>
+
+                        </tr>
+                        <tr>
+                            <td class="nombre">Xiami Xinxan</td>
+                            <td class="curso">999123A</td>
+                            <td class="id">Marta Moreno</td>
+                            <td> fallo en la pantalla</td>
+
+                        </tr>
+                        <tr>
+                            <td class="nombre">Nokia C3</td>
+                            <td class="curso">678123A</td>
+                            <td class="id">Joselu Johnson</td>
+                            <td> fallo en la pantalla</td>
+                        
+                        </tr>
+                        <tr>
+                            <td class="nombre">Samsung Galaxy</td>
+                            <td class="curso">423533A</td>
+                            <td class="id">Pepe Villuela</td>
+                            <td> fallo en el cargador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form class="form_solicitudes" id="form_solicitudes">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="nombre" required>
+
+                <label for="text">Curso:</label>
+                <input type="text" id="Curso" name="Curso" required>
+
+                <label for="text">Id tablet:</label>
+                <input type="text" id="ID" name="ID" required>
+
+                <label for="mensaje">Problema:</label>
+                <textarea type="text" id="Problema" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <img class="logo" src="imagenes/logo.png" alt="">
+
+
+            <div class="link_container">
+                <a class="link" href="">Politica de Privacidad</a>
+                <a class="link" href="">Politica de Cookies</a>
+            </div>
+
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com"><img src="imagenes/insta.png" alt="">
+                    <a href="https://es-es.facebook.com"><img src="imagenes/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/home"></a><img src="imagenes/twitter.png" alt="">
+                    <a href="imagenes/meme-wojack.jpeg"><img src="imagenes/dah.png" alt=""></a>
+            </div>
+    </footer>
+    </footer>
+</body>
+
+</html>
